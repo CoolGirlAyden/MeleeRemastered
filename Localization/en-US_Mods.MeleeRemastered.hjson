@@ -1,0 +1,78 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	hah: {
+		DisplayName: hah
+		Tooltip:
+			'''
+			Template of an item
+			Replacing this tooltip is duty 
+			It's snowing on Mt.Fuji
+			'''
+	}
+}
+
+Projectiles: {
+	hahProj.DisplayName: hah Proj
+	AdamantiteSwordProj.DisplayName: Adamantite Sword Proj
+	AshWoodSwordProj.DisplayName: Ash Wood Sword Proj
+	BatBatProj.DisplayName: Bat Bat Proj
+	BeamSwordProj.DisplayName: Beam Sword Proj
+	BeeKeeperProj.DisplayName: Bee Keeper Proj
+	BladeOfGrassProj.DisplayName: Blade Of Grass Proj
+	BladetongueProj.DisplayName: Bladetongue Proj
+	BloodButchererProj.DisplayName: Blood Butcherer Proj
+	BoneSwordProj.DisplayName: Bone Sword Proj
+	BorealWoodSwordProj.DisplayName: Boreal Wood Sword Proj
+	BrandOfTheInfernoProj.DisplayName: Brand Of The Inferno Proj
+	BreakerBladeProj.DisplayName: Breaker Blade Proj
+	CandyCaneSwordProj.DisplayName: Candy Cane Sword Proj
+	ChlorophyteClaymoreProj.DisplayName: Chlorophyte Claymore Proj
+	ChlorophyteSaberProj.DisplayName: Chlorophyte Saber Proj
+	ChristmasTreeSwordProj.DisplayName: Christmas Tree Sword Proj
+	ClassyCaneProj.DisplayName: Classy Cane Proj
+	CobaltSwordProj.DisplayName: Cobalt Sword Proj
+	CopperBroadswordProj.DisplayName: Copper Broadsword Proj
+	CutlassProj.DisplayName: Cutlass Proj
+	DeathSickleProj.DisplayName: Death Sickle Proj
+	EbonwoodSwordProj.DisplayName: Ebonwood Sword Proj
+	EnchantedSwordProj.DisplayName: Enchanted Sword Proj
+	ExoticScimitarProj.DisplayName: Exotic Scimitar Proj
+	FalconBladeProj.DisplayName: Falcon Blade Proj
+	FlyingDragonProj.DisplayName: Flying Dragon Proj
+	FlymealProj.DisplayName: Flymeal Proj
+	FrostbrandProj.DisplayName: Frostbrand Proj
+	GoldBroadswordProj.DisplayName: Gold Broadsword Proj
+	HamBatProj.DisplayName: Ham Bat Proj
+	IceBladeProj.DisplayName: Ice Blade Proj
+	IceSickleProj.DisplayName: Ice Sickle Proj
+	InfluxWaverProj.DisplayName: Influx Waver Proj
+	IronBroadswordProj.DisplayName: Iron Broadsword Proj
+	KatanaProj.DisplayName: Katana Proj
+	KeybrandProj.DisplayName: Keybrand Proj
+	LeadBroadswordProj.DisplayName: Lead Broadsword Proj
+	LightsBaneProj.DisplayName: Lights Bane Proj
+	MandibleBladeProj.DisplayName: Mandible Blade Proj
+	MeowmereProj.DisplayName: Meowmere Proj
+	MuramasaProj.DisplayName: Muramasa Proj
+	MythrilSwordProj.DisplayName: Mythril Sword Proj
+	OrichalcumSwordProj.DisplayName: Orichalcum Sword Proj
+	PalladiumSwordProj.DisplayName: Palladium Sword Proj
+	PalmWoodSwordProj.DisplayName: Palm Wood Sword Proj
+	PearlwoodSwordProj.DisplayName: Pearlwood Sword Proj
+	PlatinumBroadswordProj.DisplayName: Platinum Broadsword Proj
+	PurpleClubberfishProj.DisplayName: Purple Clubberfish Proj
+	SeedlerProj.DisplayName: Seedler Proj
+	ShadewoodSwordProj.DisplayName: Shadewood Sword Proj
+	SilverBroadswordProj.DisplayName: Silver Broadsword Proj
+	SlapHandProj.DisplayName: Slap Hand Proj
+	StarfuryProj.DisplayName: Starfury Proj
+	StarWrathProj.DisplayName: Star Wrath Proj
+	StylishScissorsProj.DisplayName: Stylish Scissors Proj
+	TentacleSpikeProj.DisplayName: Tentacle Spike Proj
+	TitaniumSwordProj.DisplayName: Titanium Sword Proj
+	TungstenBroadswordProj.DisplayName: Tungsten Broadsword Proj
+	VolcanoProj.DisplayName: Volcano Proj
+	WoodenSwordProj.DisplayName: Wooden Sword Proj
+	ZombieArmProj.DisplayName: Zombie Arm Proj
+}

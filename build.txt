@@ -1,0 +1,3 @@
+displayName = Melee Remastered
+author = Ayden
+version = 0.1
