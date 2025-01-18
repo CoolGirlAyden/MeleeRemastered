@@ -220,9 +220,12 @@ namespace MeleeRemastered.Content.Projectiles
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            Vector2 pos = target.Center;
             for (int i = 0; i < (int)Power; i++)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-300, 300), -2500), Projectile.velocity.DirectionTo(target.Center), ProjectileID.Starfury, Projectile.damage, Projectile.knockBack);
+                pos += new Vector2(Main.rand.Next(-300, 300), -1500);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), pos, pos.DirectionTo(target.Center) * 24, ProjectileID.Starfury, Projectile.damage, Projectile.knockBack);
+                pos = target.Center;
             }
         }
     }
