@@ -84,7 +84,7 @@ namespace MeleeRemastered.Content.Projectiles
             if (Timer < 180)
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
-                Size = MathHelper.SmoothStep(0.2f, 2, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
+                Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
                 DamageMultiplyer += 0.0033f;
                 Bees += 0.1f;
             }

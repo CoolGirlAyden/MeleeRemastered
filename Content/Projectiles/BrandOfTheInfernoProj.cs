@@ -20,6 +20,7 @@ namespace MeleeRemastered.Content.Projectiles
         private const float UNWIND = 0.4f; // When should the sword start disappearing
         private Player Owner => Main.player[Projectile.owner];
         public float DamageMultiplyer = 1f;
+        public int State = 0;
 
         // Variables to keep track of during runtime
         private ref float InitialAngle => ref Projectile.ai[1]; // Angle aimed in (with constraints)
@@ -84,12 +85,15 @@ namespace MeleeRemastered.Content.Projectiles
             if (Timer < 180)
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
-                Size = MathHelper.SmoothStep(0.2f, 2, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
+                Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
                 DamageMultiplyer += 0.0033f;
+                if (Timer > 90 && Timer < 180)
+                  State = 1;
             }
             else if (Timer == 180)
             {
                 SoundEngine.PlaySound(SoundID.Item4);
+                State = 2;
             }
         }
         private void ExecuteStrike()
@@ -211,6 +215,13 @@ namespace MeleeRemastered.Content.Projectiles
             // Make knockback go away from player
             modifiers.HitDirectionOverride = target.position.X > Owner.MountedCenter.X ? 1 : -1;
 
+        }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (State == 1)
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.Volcano, Projectile.damage, 0);
+            else if (State == 2)
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.InfernoFriendlyBlast, Projectile.damage, 0);
         }
     }
 }

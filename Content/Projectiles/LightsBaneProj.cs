@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
 using System;
 using Terraria.Audio;
+using Terraria.GameContent.ObjectInteractions;
 
 namespace MeleeRemastered.Content.Projectiles
 {
@@ -84,7 +85,7 @@ namespace MeleeRemastered.Content.Projectiles
             if (Timer < 180)
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
-                Size = MathHelper.SmoothStep(0.2f, 2, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
+                Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
                 DamageMultiplyer += 0.0033f;
             }
             else if (Timer == 180)
@@ -102,6 +103,8 @@ namespace MeleeRemastered.Content.Projectiles
             if (i == 1)
                 CurrentStage = AttackStage.Execute;
             Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) * Timer / 5);
+            if (i == 3)
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.LightsBane, Projectile.damage, 0.5f);
             if (Timer >= 5)
             {
                 Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) + UNWIND * Timer / 6);

@@ -20,7 +20,6 @@ namespace MeleeRemastered.Content.Projectiles
         private Player Owner => Main.player[Projectile.owner];
         public float DamageMultiplyer = 1f;
         public int Power = 0;
-        public int Angle = 0;
 
         // Variables to keep track of during runtime
         private ref float InitialAngle => ref Projectile.ai[1]; // Angle aimed in (with constraints)
@@ -85,7 +84,7 @@ namespace MeleeRemastered.Content.Projectiles
             if (Timer < 180)
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
-                Size = MathHelper.SmoothStep(0.2f, 2, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
+                Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
                 DamageMultiplyer += 0.0033f;
                 if (Timer >= 30 && Timer < 60)
                     Power = 1;
@@ -228,8 +227,7 @@ namespace MeleeRemastered.Content.Projectiles
         {
             for (int i = 0; i < (int)Power; i++)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, new Vector2(Angle, 0), ProjectileID.BloodButcherer, 0, 0);
-                Angle += 60;
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.BloodButcherer, 0, 0);
             }
         }
     }

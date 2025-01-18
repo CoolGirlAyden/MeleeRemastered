@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
 using System;
 using Terraria.Audio;
+using System.Collections.Generic;
 
 namespace MeleeRemastered.Content.Projectiles
 {
@@ -20,6 +21,8 @@ namespace MeleeRemastered.Content.Projectiles
         private const float UNWIND = 0.4f; // When should the sword start disappearing
         private Player Owner => Main.player[Projectile.owner];
         public float DamageMultiplyer = 1f;
+        public bool DoesSlash = false;
+        public int RotationAngle = Main.rand.Next(0, 120);
 
         // Variables to keep track of during runtime
         private ref float InitialAngle => ref Projectile.ai[1]; // Angle aimed in (with constraints)
@@ -84,11 +87,12 @@ namespace MeleeRemastered.Content.Projectiles
             if (Timer < 180)
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
-                Size = MathHelper.SmoothStep(0.2f, 2, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
+                Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
                 DamageMultiplyer += 0.0033f;
             }
             else if (Timer == 180)
             {
+                DoesSlash = true;
                 SoundEngine.PlaySound(SoundID.Item4);
             }
         }
@@ -102,6 +106,13 @@ namespace MeleeRemastered.Content.Projectiles
             if (i == 1)
                 CurrentStage = AttackStage.Execute;
             Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) * Timer / 5);
+            if (i == 3 && DoesSlash == true)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Owner.Center + (new Vector2(Main.rand.Next(0, 250), Main.rand.Next(-100, 100)) * Owner.direction), Vector2.Zero.RotatedBy(Main.rand.Next(0, 120)), ProjectileID.Muramasa, Projectile.damage / 2, 0.5f);
+                }
+            }
             if (Timer >= 5)
             {
                 Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) + UNWIND * Timer / 6);
