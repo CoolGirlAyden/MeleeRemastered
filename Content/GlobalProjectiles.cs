@@ -24,6 +24,9 @@ namespace MeleeRemastered.Content
                 case ProjectileID.EnchantedBeam:
                     projectile.timeLeft = 120;
                     break;
+                case ProjectileID.FrostBeam:
+                    projectile.timeLeft = 120;
+                    break;
                 case ProjectileID.InfluxWaver:
                     projectile.timeLeft = 120;
                     break;
