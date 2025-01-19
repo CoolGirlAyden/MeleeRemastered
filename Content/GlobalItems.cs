@@ -3,6 +3,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using MeleeRemastered.Content.Projectiles;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework;
+using Mono.CompilerServices.SymbolWriter;
 
 namespace MeleeRemastered.Content
 {
@@ -379,6 +382,16 @@ namespace MeleeRemastered.Content
                     item.channel = true;
                     break;
             }
+        }
+        public override bool Shoot(Item item, Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            if (item.type == ItemID.StarWrath)
+            {
+                Projectile.NewProjectile(source, position, velocity, type, damage, knockback);
+                return false;
+            }
+            else
+            return base.Shoot(item, player, source, position, velocity, type, damage, knockback);
         }
     }
 }

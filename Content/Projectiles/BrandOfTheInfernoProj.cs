@@ -221,7 +221,7 @@ namespace MeleeRemastered.Content.Projectiles
             if (State == 1)
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.Volcano, Projectile.damage, 0);
             else if (State == 2)
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.InfernoFriendlyBlast, Projectile.damage, 0);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.InfernoFriendlyBlast, Projectile.damage / 8, 0);
         }
     }
 }
