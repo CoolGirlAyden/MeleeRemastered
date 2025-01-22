@@ -88,7 +88,7 @@ namespace MeleeRemastered.Content.Projectiles
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
                 Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
-                DamageMultiplyer += 0.0033f;
+                DamageMultiplyer = MathHelper.SmoothStep(0.8f, 1.7f, Timer / 180);
             }
             else if (Timer == 180)
             {
@@ -127,8 +127,11 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            player.itemAnimation = 2;
-            player.itemTime = 2;
+            if (player.channel)
+            {
+                player.itemAnimation += 1;
+                player.itemTime += 1;
+            }
 
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
@@ -145,7 +148,10 @@ namespace MeleeRemastered.Content.Projectiles
                 ExecuteStrike();
             }
             SetSwordPosition();
-            Timer++;
+            if (player.channel)
+                Timer += 1 + (20 / player.itemTime);
+            else
+                Timer++;
         }
         public void SetSwordPosition()
         {

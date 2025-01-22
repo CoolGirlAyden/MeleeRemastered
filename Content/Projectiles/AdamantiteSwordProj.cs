@@ -18,7 +18,7 @@ namespace MeleeRemastered.Content.Projectiles
         private const float FIRSTHALFSWING = 0.45f; // How much of the swing happens before it reaches the target angle (in relation to swingRange)
         private const float WINDUP = 0.15f; // How far back the player's hand goes when winding their attack (in relation to swingRange)
         private const float UNWIND = 0.4f; // When should the sword start disappearing
-        private Player Owner => Main.player[Projectile.owner];
+        public Player Owner => Main.player[Projectile.owner];
         public float DamageMultiplyer = 1f;
 
         // Variables to keep track of during runtime
@@ -85,7 +85,7 @@ namespace MeleeRemastered.Content.Projectiles
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
                 Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
-                DamageMultiplyer += 0.0033f;
+                DamageMultiplyer = MathHelper.SmoothStep(0.8f, 1.7f, Timer / 180);
             }
             else if (Timer == 180)
             {
@@ -116,9 +116,12 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            player.itemAnimation = 2;
-            player.itemTime = 2;
-
+            if (player.channel)
+            {
+                player.itemAnimation += 1;
+                player.itemTime += 1;
+            }
+            
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
             {
@@ -134,7 +137,10 @@ namespace MeleeRemastered.Content.Projectiles
                 ExecuteStrike();
             }
             SetSwordPosition();
-            Timer++;
+            if (player.channel)
+                Timer += 1 + (20 / player.itemTime);
+            else
+                Timer++;
         }
         public void SetSwordPosition()
         {

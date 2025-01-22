@@ -85,7 +85,7 @@ namespace MeleeRemastered.Content.Projectiles
             {
                 Progress = WINDUP * SWINGRANGE * (1f - Timer / 180); // Calculates rotation from initial angle
                 Size = MathHelper.SmoothStep(0.6f, 1.1f, Timer / 180); // Make sword slowly increase in size as we prepare to strike until it reaches max
-                DamageMultiplyer += 0.0033f;
+                DamageMultiplyer = MathHelper.SmoothStep(0.8f, 1.7f, Timer / 180);
                 if (Timer >= 30 && Timer < 60)
                     Power = 1;
                 else if (Timer >= 60 && Timer < 90)
@@ -127,8 +127,11 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            player.itemAnimation = 2;
-            player.itemTime = 2;
+            if (player.channel)
+            {
+                player.itemAnimation += 1;
+                player.itemTime += 1;
+            }
 
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
@@ -145,7 +148,10 @@ namespace MeleeRemastered.Content.Projectiles
                 ExecuteStrike();
             }
             SetSwordPosition();
-            Timer++;
+            if (player.channel)
+                Timer += 1 + (20 / player.itemTime);
+            else
+                Timer++;
         }
         public void SetSwordPosition()
         {
@@ -229,7 +235,7 @@ namespace MeleeRemastered.Content.Projectiles
             for (int i = 0; i < (int)Power; i++)
             {
                 pos += new Vector2(Main.rand.Next(-300, 300), -1500);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), pos, pos.DirectionTo(target.Center) * 24, ProjectileID.StarWrath, Projectile.damage, Projectile.knockBack);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), pos, pos.DirectionTo(target.Center) * 24, ProjectileID.StarWrath, Projectile.damage / 6, Projectile.knockBack);
                 pos = target.Center;
             }
         }

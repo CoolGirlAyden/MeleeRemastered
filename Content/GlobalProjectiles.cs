@@ -35,6 +35,11 @@ namespace MeleeRemastered.Content
                     projectile.usesLocalNPCImmunity = true;
                     projectile.localNPCHitCooldown = -1;
                     break;
+                case ProjectileID.Starfury:
+                    projectile.penetrate = -1;
+                    projectile.usesLocalNPCImmunity = true;
+                    projectile.localNPCHitCooldown = -1;
+                    break;
             }
         }
         public override bool OnTileCollide(Projectile projectile, Vector2 oldVelocity)
