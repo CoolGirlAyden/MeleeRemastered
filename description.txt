@@ -1,1 +1,1 @@
-Modify this file with a description of your mod.
+This mod aims to improve melee class by adding a charge attack to a sword, the more you charge, the better attack gets
