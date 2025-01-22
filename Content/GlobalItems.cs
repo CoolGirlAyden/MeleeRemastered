@@ -20,7 +20,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.AshWoodSword:
@@ -28,9 +28,9 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BatBat:
@@ -38,7 +38,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BeamSword:
@@ -46,7 +46,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BeeKeeper:
@@ -54,7 +54,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BladeofGrass:
@@ -62,7 +62,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Bladetongue:
@@ -70,7 +70,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BloodButcherer:
@@ -78,7 +78,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BoneSword:
@@ -86,7 +86,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BorealWoodSword:
@@ -94,7 +94,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.DD2SquireDemonSword:
@@ -102,7 +102,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.BreakerBlade:
@@ -110,7 +110,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.CandyCaneSword:
@@ -118,7 +118,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.ChlorophyteClaymore:
@@ -126,7 +126,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.ChlorophyteSaber:
@@ -134,7 +134,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.ChristmasTreeSword:
@@ -142,7 +142,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.TaxCollectorsStickOfDoom:
@@ -150,7 +150,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.CobaltSword:
@@ -158,7 +158,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.CopperBroadsword:
@@ -166,7 +166,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Cutlass:
@@ -174,7 +174,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.DeathSickle:
@@ -182,7 +182,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.EbonwoodSword:
@@ -190,7 +190,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.EnchantedSword:
@@ -198,7 +198,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.DyeTradersScimitar:
@@ -206,7 +206,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.FalconBlade:
@@ -214,7 +214,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.DD2SquireBetsySword:
@@ -222,7 +222,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Flymeal:
@@ -230,7 +230,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Frostbrand:
@@ -238,7 +238,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.GoldBroadsword:
@@ -246,7 +246,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.HamBat:
@@ -254,7 +254,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.IceBlade:
@@ -262,7 +262,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.IceSickle:
@@ -270,7 +270,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.InfluxWaver:
@@ -278,7 +278,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.IronBroadsword:
@@ -286,7 +286,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Katana:
@@ -294,7 +294,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Keybrand:
@@ -302,7 +302,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.LeadBroadsword:
@@ -310,7 +310,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.LightsBane:
@@ -318,7 +318,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.AntlionMandible:
@@ -326,7 +326,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Meowmere:
@@ -334,7 +334,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Muramasa:
@@ -342,7 +342,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.MythrilSword:
@@ -350,7 +350,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.OrichalcumSword:
@@ -358,7 +358,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.PalladiumSword:
@@ -366,7 +366,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.PalmWoodSword:
@@ -374,7 +374,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.PearlwoodSword:
@@ -382,7 +382,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.PlatinumBroadsword:
@@ -390,7 +390,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.PurpleClubberfish:
@@ -398,7 +398,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Seedler:
@@ -406,7 +406,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.ShadewoodSword:
@@ -414,7 +414,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.SilverBroadsword:
@@ -422,7 +422,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.SlapHand:
@@ -430,7 +430,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.Starfury:
@@ -438,7 +438,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.StarWrath:
@@ -446,7 +446,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.StylistKilLaKillScissorsIWish:
@@ -454,7 +454,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.TentacleSpike:
@@ -462,7 +462,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.TitaniumSword:
@@ -470,7 +470,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.TungstenBroadsword:
@@ -478,7 +478,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.FieryGreatsword:
@@ -486,7 +486,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.WoodenSword:
@@ -494,7 +494,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
                 case ItemID.ZombieArm:
@@ -502,7 +502,7 @@ namespace MeleeRemastered.Content
                     item.noMelee = true;
                     item.noUseGraphic = true;
                     item.channel = true;
-                    item.ChangePlayerDirectionOnShoot = false;
+                    item.ChangePlayerDirectionOnShoot = true;
                     item.useTurn = false;
                     break;
             }
