@@ -122,11 +122,8 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            if (player.channel)
-            {
-                player.itemAnimation += 1;
-                player.itemTime += 1;
-            }
+            player.itemAnimation += 1;
+            player.itemTime += 1;
 
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
@@ -230,7 +227,7 @@ namespace MeleeRemastered.Content.Projectiles
             for (int i = 0; i < (int)Power; i++)
             {
                 pos += new Vector2(Main.rand.Next(-360, 360), Main.rand.Next(-360, 360));
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), pos, pos.DirectionTo(target.Center) * 6, ProjectileID.FlowerPetal, Projectile.damage / 2, 0.1f);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), pos, pos.DirectionTo(target.Center) * 6, ProjectileID.FlowerPetal, Projectile.damage / 6, 0.1f);
                 pos = target.Center;
             }
         }

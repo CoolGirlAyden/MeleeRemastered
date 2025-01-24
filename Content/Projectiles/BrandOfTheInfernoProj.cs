@@ -120,11 +120,8 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            if (player.channel)
-            {
-                player.itemAnimation += 1;
-                player.itemTime += 1;
-            }
+            player.itemAnimation += 1;
+            player.itemTime += 1;
 
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
@@ -225,7 +222,7 @@ namespace MeleeRemastered.Content.Projectiles
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (State == 1)
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.Volcano, Projectile.damage, 0);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.Volcano, Projectile.damage / 8, 0);
             else if (State == 2)
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileID.InfernoFriendlyBlast, Projectile.damage / 8, 0);
         }

@@ -119,11 +119,8 @@ namespace MeleeRemastered.Content.Projectiles
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
-            if (player.channel)
-            {
-                player.itemAnimation += 1;
-                player.itemTime += 1;
-            }
+            player.itemAnimation += 1;
+            player.itemTime += 1;
 
             // Kill the projectile if the player dies or gets crowd controlled
             if (!player.active || player.dead || player.noItems || player.CCed)
