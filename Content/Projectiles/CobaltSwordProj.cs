@@ -59,28 +59,9 @@ namespace MeleeRemastered.Content.Projectiles
             Projectile.ownerHitCheck = true; // Make sure the owner of the projectile has line of sight to the target (aka can't hit things through tile).
             Projectile.DamageType = DamageClass.Melee; // Projectile is a melee projectile
         }
-        public override void OnSpawn(IEntitySource source)
+       public override void OnSpawn(IEntitySource source)
         {
-            Player Owner = Main.player[Projectile.owner];
-            Projectile.spriteDirection = Main.MouseWorld.X > Owner.MountedCenter.X ? 1 : -1;
             CurrentStage = AttackStage.Prepare;
-            float targetAngle = (Main.MouseWorld - Owner.MountedCenter).ToRotation();
-                if (Projectile.spriteDirection == 1)
-                {
-                    // However, we limit the rangle of possible directions so it does not look too ridiculous
-                    targetAngle = MathHelper.Clamp(targetAngle, (float)-Math.PI * 1 / 3, (float)Math.PI * 1 / 6);
-                }
-                else
-                {
-                    if (targetAngle < 0)
-                    {
-                        targetAngle += 2 * (float)Math.PI; // This makes the range continuous for easier operations
-                    }
-
-                    targetAngle = MathHelper.Clamp(targetAngle, (float)Math.PI * 5 / 6, (float)Math.PI * 4 / 3);
-                }
-
-                InitialAngle = targetAngle - FIRSTHALFSWING * SWINGRANGE * Projectile.spriteDirection; // Otherwise, we calculate the angle
         }
         private void PrepareStrike()
         {
@@ -152,8 +133,11 @@ namespace MeleeRemastered.Content.Projectiles
         }
         public void SetSwordPosition()
         {
-
             Player Owner = Main.player[Projectile.owner];
+            Projectile.spriteDirection = Main.MouseWorld.X > Owner.MountedCenter.X ? 1 : -1;
+			Owner.ChangeDir(Projectile.spriteDirection); // Change the player's direction based on the projectile's own
+            float targetAngle = (Main.MouseWorld - Owner.MountedCenter).ToRotation();
+            InitialAngle = targetAngle - FIRSTHALFSWING * SWINGRANGE * Projectile.spriteDirection;
             Projectile.rotation = InitialAngle + Projectile.spriteDirection * Progress; // Set projectile rotation
 
             // Set composite arm allows you to set the rotation of the arm and stretch of the front and back arms independently
