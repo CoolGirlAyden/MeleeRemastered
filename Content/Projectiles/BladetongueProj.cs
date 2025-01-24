@@ -210,7 +210,7 @@ namespace MeleeRemastered.Content.Projectiles
         {
             for (int i = 0; i < (int)Power; i++)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, (Projectile.DirectionTo(Main.MouseWorld) * 8).RotatedByRandom(MathHelper.ToRadians(45)), ProjectileID.IchorSplash, Projectile.damage / 2, 0.1f);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, (Projectile.DirectionTo(Main.MouseWorld) * 6).RotatedByRandom(MathHelper.ToRadians(45)), ProjectileID.IchorSplash, Projectile.damage / 2, 0.1f);
             }
         }
     }
