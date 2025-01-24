@@ -19,12 +19,15 @@ namespace MeleeRemastered.Content
                     projectile.penetrate = 5;
                     break;
                 case ProjectileID.SporeCloud:
-                    projectile.timeLeft = 120;
+                    projectile.timeLeft = 240;
                     break;
                 case ProjectileID.EnchantedBeam:
                     projectile.timeLeft = 120;
                     break;
-                case ProjectileID.FrostBeam:
+                case ProjectileID.IceBolt:
+                    projectile.timeLeft = 120;
+                    break;
+                case ProjectileID.SwordBeam:
                     projectile.timeLeft = 120;
                     break;
                 case ProjectileID.InfluxWaver:

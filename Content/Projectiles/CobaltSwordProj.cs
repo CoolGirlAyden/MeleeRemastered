@@ -91,7 +91,7 @@ namespace MeleeRemastered.Content.Projectiles
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Owner.Center + (new Vector2(Main.rand.Next(0, 250), Main.rand.Next(-100, 100)) * Owner.direction), Vector2.Zero.RotatedBy(Main.rand.Next(0, 120)), ProjectileID.Muramasa, Projectile.damage / 2, 0.5f);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Owner.Center + (new Vector2(Main.rand.Next(0, 250), Main.rand.Next(-100, 100)) * Owner.direction), Vector2.Zero.RotatedBy(Projectile.DirectionTo(Main.MouseWorld).ToRotation()), ProjectileID.Muramasa, Projectile.damage / 2, 0.5f);
                 }
             }
             if (Timer >= 5)

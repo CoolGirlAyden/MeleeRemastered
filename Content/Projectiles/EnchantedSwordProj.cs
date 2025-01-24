@@ -91,7 +91,7 @@ namespace MeleeRemastered.Content.Projectiles
                 CurrentStage = AttackStage.Execute;
                 for (int i = 0; i < (int)Power; i++)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(5 * Owner.direction, Main.rand.Next(-7, 7)), ProjectileID.EnchantedBeam, Projectile.damage / 2, 0.1f);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, (Projectile.DirectionTo(Main.MouseWorld) * 8).RotatedByRandom(MathHelper.ToRadians(45)), ProjectileID.EnchantedBeam, Projectile.damage / 2, 0.1f);
                 }
             }
             Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) * Timer / 5);

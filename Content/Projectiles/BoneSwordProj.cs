@@ -97,7 +97,7 @@ namespace MeleeRemastered.Content.Projectiles
             Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) * Timer / 5);
             if (Timer == 3)
                 for (int i = 0; i < Power; i++)
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, new Vector2(5 * Owner.direction, Main.rand.Next(-7, 7)) , ProjectileID.Bone, Projectile.damage / 8, 0.4f);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, (Projectile.DirectionTo(Main.MouseWorld) * 6).RotatedByRandom(MathHelper.ToRadians(45)) , ProjectileID.Bone, Projectile.damage / 8, 0.4f);
             if (Timer >= 5)
             {
                 Progress = MathHelper.SmoothStep(0, SWINGRANGE, (1f - UNWIND) + UNWIND * Timer / 6);
