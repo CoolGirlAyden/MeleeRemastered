@@ -215,7 +215,7 @@ namespace MeleeRemastered.Content.Projectiles
         {
             for (int i = 0; i < (int)Power; i++)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, new Vector2(2 * Main.rand.Next(-4, 4), -4), ProjectileID.SeedlerNut / 5, Projectile.damage, Projectile.knockBack);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, new Vector2(2 * Main.rand.Next(-4, 4), -4), ProjectileID.SeedlerNut , Projectile.damage / 5, Projectile.knockBack);
             }
         }
     }
