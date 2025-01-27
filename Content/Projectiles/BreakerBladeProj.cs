@@ -197,7 +197,8 @@ namespace MeleeRemastered.Content.Projectiles
         {
             // Make knockback go away from player
             modifiers.HitDirectionOverride = target.position.X > Owner.MountedCenter.X ? 1 : -1;
-
+            if (target.life >= target.lifeMax * 0.8f)
+                modifiers.ScalingBonusDamage += 2f;
         }
     }
 }
